@@ -38,13 +38,10 @@ def parse_daftemacs_qb(cls, keystr: str) -> 'KeySequence':
 
 KeySequence.parse = parse_daftemacs_qb
 
-
-#config = config  # type: ConfigAPI # noqa: F821 pylint: disable=E0602,C0103
-#c = c  # type: ConfigContainer # noqa: F821 pylint: disable=E0602,C0103
-
 """ Base """
 
-c.confirm_quit = ['multiple-tabs', 'downloads']
+c.auto_save.session = True
+c.confirm_quit = ['downloads']
 
 """ tabs """
 
