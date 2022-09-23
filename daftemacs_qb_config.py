@@ -66,7 +66,7 @@ c.url.searchengines["DuckDuckGo"] = "https://duckduckgo.com/?q={}"
 
 c.colors.tabs.bar.bg = '#282a36'
 c.colors.tabs.indicator.error = '#ff5555'
-c.colors.tabs.indicator.start = '#50fa7b'
+c.colors.tabs.indicator.start = '#f1fa8c'
 c.colors.tabs.indicator.stop = '#282a36'
 c.colors.tabs.even.bg = '#282a36'
 c.colors.tabs.odd.bg = '#282a36'
@@ -84,6 +84,29 @@ c.colors.tabs.pinned.selected.even.bg = '#50fa7b'
 c.colors.tabs.pinned.selected.odd.bg = '#50fa7b'
 c.colors.tabs.pinned.selected.even.fg = '#000000'
 c.colors.tabs.pinned.selected.odd.fg = '#000000'
+c.colors.statusbar.caret.bg = 'purple'
+c.colors.statusbar.caret.fg = 'white'
+c.colors.statusbar.caret.selection.bg = '#a12dff'
+c.colors.statusbar.caret.selection.fg = 'white'
+c.colors.statusbar.command.bg = 'black'
+c.colors.statusbar.command.fg = 'white'
+c.colors.statusbar.command.private.bg = 'darkslategray'
+c.colors.statusbar.command.private.fg = 'white'
+c.colors.statusbar.insert.bg = '#44475a'
+c.colors.statusbar.insert.fg = 'white'
+c.colors.statusbar.normal.bg = '#282a36'
+c.colors.statusbar.normal.fg = 'white'
+c.colors.statusbar.passthrough.bg = 'darkblue'
+c.colors.statusbar.passthrough.fg = 'white'
+c.colors.statusbar.private.bg = '#6272a4'
+c.colors.statusbar.private.fg = 'white'
+c.colors.statusbar.progress.bg = '#ff79c6'
+c.colors.statusbar.url.error.fg = '#ff5555'
+c.colors.statusbar.url.fg = '#8be9fd'
+c.colors.statusbar.url.hover.fg = '#f1fa8c'
+c.colors.statusbar.url.success.http.fg = '#50fa7b'
+c.colors.statusbar.url.success.https.fg = '#50fa7b'
+c.colors.statusbar.url.warn.fg = '#f1fa8c'
 
 """ input """
 
@@ -103,7 +126,7 @@ c.bindings.default['insert'] = {}
 
 c.bindings.commands['insert'] = {
     '<ctrl-space>': 'mode-leave',
-#    '<ctrl-g>': 'mode-leave;;fake-key <Left>;;fake-key <Right>',
+    '<ctrl-g>': 'mode-leave',
     '<ctrl-f>': 'fake-key <Shift-Right>',
     '<ctrl-b>': 'fake-key <Shift-Left>',
     '<ctrl-e>': 'fake-key <Shift-End>',
@@ -219,9 +242,8 @@ c.bindings.commands['normal'] = {
     '9': 'fake-key 9',
     '0': 'fake-key 0',
 
-    # escape hatch
+    # help
     '<ctrl-h>': 'set-cmd-text -s :help',
-    #'<ctrl-g>': ESC_BIND,
 }
 
 c.bindings.commands['command'] = {
@@ -233,20 +255,14 @@ c.bindings.commands['command'] = {
 
     '<alt-p>': 'command-history-prev',
     '<alt-n>': 'command-history-next',
-
-    # escape hatch
-    #'<ctrl-g>': 'mode-leave',
 }
 
-c.bindings.commands['hint'] = {
-    # escape hatch
-    #'<ctrl-g>': 'mode-leave',
-}
+#c.bindings.commands['hint'] = {
+#    '<ctrl-g>': 'mode-leave',
+#}
 
 c.bindings.commands['caret'] = {
-    # escape hatch
-    #'<ctrl-g>': 'mode-leave',
-    '<ctrl-space>': 'toggle-selection'
+    '<ctrl-space>': 'toggle-selection',
 }
 
 c.bindings.key_mappings = {"<Ctrl-G>": "<Escape>"}
