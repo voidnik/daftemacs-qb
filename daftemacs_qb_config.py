@@ -191,6 +191,7 @@ c.bindings.commands['normal'] = {
 
     # hinting
     '<alt-g><alt-g>': 'hint all',
+    '<alt-g><alt-y>': 'hint links spawn --detach mpv {hint-url}',
 
     # tabs
     '<alt-[>': 'tab-prev',
