@@ -238,7 +238,7 @@ c.bindings.commands['normal'] = {
     '<alt-backspace>': 'fake-key <Ctrl-Backspace>',
     '<ctrl-w>': 'fake-key <Ctrl-x>;;message-info "cut to clipboard"',
     '<alt-w>': 'fake-key <Ctrl-c>;;message-info "copy to clipboard"',
-    '<ctrl-y>': 'insert-text {primary}',
+    '<ctrl-y>': 'fake-key <Ctrl-v>',
     '1': 'fake-key 1',
     '2': 'fake-key 2',
     '3': 'fake-key 3',
