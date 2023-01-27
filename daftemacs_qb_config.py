@@ -208,6 +208,7 @@ c.bindings.commands['normal'] = {
     '<alt-8>': 'tab-select 8',
     '<alt-9>': 'tab-select 9',
     '<alt-0>': 'tab-select 10',
+    '<alt-->': 'tab-focus last',
 
     # open links
     '<ctrl-l>': 'set-cmd-text -s :open',
