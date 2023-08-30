@@ -12,7 +12,7 @@
 
 """ Replace 'KeySequence.parse' with 'parse_daftemacs_qb' """
 
-from PyQt5.QtGui import QKeySequence
+from PyQt6.QtGui import QKeySequence
 from qutebrowser.utils import utils
 from qutebrowser.keyinput.keyutils import _parse_keystring, KeySequence
 
@@ -143,7 +143,7 @@ c.bindings.commands['insert'] = {
     '<ctrl-w>': 'fake-key <Ctrl-x>;;message-info "cut to clipboard";;mode-leave',
     '<alt-w>': 'fake-key <Ctrl-c>;;message-info "copy to clipboard";;mode-leave',
     '<backspace>': 'fake-key <backspace>;;mode-leave',
-    '<alt-x>': 'mode-leave;;set-cmd-text :',
+    '<alt-x>': 'mode-leave;;cmd-set-text :',
     '<alt-o>': 'mode-leave;;tab-focus last',
     '<Tab>': 'fake-key <f1>'
 }
@@ -174,7 +174,7 @@ c.bindings.commands['normal'] = {
     '<alt-shift-greater>': 'scroll-to-perc 100',
     '<alt-shift-less>': 'scroll-to-perc 0',
 
-    '<alt-x>': 'set-cmd-text :',
+    '<alt-x>': 'cmd-set-text :',
     '<ctrl-x><ctrl-b>': 'bookmark-list -t',
     '<ctrl-x>k<return>': 'tab-close',
     #'<ctrl-x>r': 'config-cycle statusbar.hide',
@@ -186,8 +186,8 @@ c.bindings.commands['normal'] = {
     '<ctrl-x><ctrl-->': 'zoom-out',
 
     # searching
-    '<ctrl-s>': 'set-cmd-text /',
-    '<ctrl-r>': 'set-cmd-text ?',
+    '<ctrl-s>': 'cmd-set-text /',
+    '<ctrl-r>': 'cmd-set-text ?',
 
     # hinting
     '<alt-g><alt-g>': 'hint all',
@@ -208,10 +208,11 @@ c.bindings.commands['normal'] = {
     '<alt-8>': 'tab-select 8',
     '<alt-9>': 'tab-select 9',
     '<alt-0>': 'tab-select 10',
+    '<alt-->': 'tab-focus last',
 
     # open links
-    '<ctrl-l>': 'set-cmd-text -s :open',
-    '<alt-l>': 'set-cmd-text -s :open -t',
+    '<ctrl-l>': 'cmd-set-text -s :open',
+    '<alt-l>': 'cmd-set-text -s :open -t',
 
     # reload
     '<ctrl-x><ctrl-v><return>': 'reload',
@@ -250,7 +251,7 @@ c.bindings.commands['normal'] = {
     '0': 'fake-key 0',
 
     # help
-    '<ctrl-h>': 'set-cmd-text -s :help',
+    '<ctrl-h>': 'cmd-set-text -s :help',
 }
 
 c.bindings.commands['command'] = {
